@@ -2,7 +2,8 @@ module.exports = (emitter, opts) => {
 
   opts = opts || {}
 
-  let emit = emitter.emit
+  var start = null
+  const emit = emitter.emit
   if (typeof emit !== 'function') {
     throw Error('Emitter type passed is not a valid event emitter.')
   }
