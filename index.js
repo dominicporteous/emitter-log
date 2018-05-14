@@ -12,7 +12,7 @@ module.exports = (emitter, opts) => {
 
   emitter.emit = (event) => {
 
-    var now = Date.now()
+    let now = Date.now()
     let diff = start === null ? 0 : now - start
     start = now
 
