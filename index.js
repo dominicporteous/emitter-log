@@ -1,8 +1,8 @@
 module.exports = (emitter, opts) => {
 
   opts = opts || {}
-
   var start = null
+
   const emit = emitter.emit
   if (typeof emit !== 'function') {
     throw Error('Emitter type passed is not a valid event emitter.')
@@ -11,7 +11,7 @@ module.exports = (emitter, opts) => {
   const name = (opts.name || emitter.constructor.name)
   const callback = (opts.callback || console.log)
 
-  emitter.emit = (event) => {
+  emitter.emit = (event,...args) => {
 
     let now = Date.now()
     let diff = start === null ? 0 : now - start
@@ -23,9 +23,9 @@ module.exports = (emitter, opts) => {
       event,
       diff
     }
-    callback(data)
 
-    return emit.apply(this, arguments)
+    callback(data,...args)
+    return emit.apply(emitter,[event].concat(args))
 
   }
 
