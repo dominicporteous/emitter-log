@@ -18,9 +18,9 @@ module.exports = (emitter, opts) => {
     start = now
 
     let data = {
+      timestamp: now,
       name,
       event,
-      time,
       diff
     }
     callback(data)
