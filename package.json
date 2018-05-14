@@ -1,0 +1,28 @@
+{
+  "name": "emitter-log",
+  "version": "0.0.9",
+  "description": "Capture all events emitted from an event emitter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dominicporteous/emitter-log.git"
+  },
+  "keywords": [
+    "event",
+    "emitter",
+    "debug",
+    "log",
+    "test",
+    "capture",
+    "emit"
+  ],
+  "author": "dominicporteous <dominic@dom.gs>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dominicporteous/emitter-log/issues"
+  },
+  "homepage": "https://github.com/dominicporteous/emitter-log#readme"
+}
